@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="destyle.css">
+        <link rel="stylesheet" href="style.css">
         <title>T-observer</title>
 
         <!-- msal.min.js can be used in the place of msal.js; included msal.js to make debug easy -->
@@ -19,15 +21,27 @@
     </head>
 
     <body>
+        <header>
+            <h1>T-observer</h1>
+            <p>規定のTeamからPlannerタスクを取得して状況に応じてTemasへ自動投稿します</p>
+        </header>
         <main>
             <button type="button" id="SignIn" class="btn" onclick="signIn()">
                 Sign In
             </button>
+            <p class="small">Officeにサインインします。<br>このアプリはあなたのチームへアクセス権を要求します。</p>
             <br>
             <button type="button" id="Watch" class="btn" onclick="check()">
                 Check
             </button>
+            <p class="small">規定のチームへTeamsメッセージを送信します。</p>
         </main>
+
+        <footer>
+            <p>
+            なにか問題がありましたか? - <a href="https://github.com/sweshelo/T-observer/issues/new">こちら</a>
+            </p>
+        </footer>
 
         <!-- importing app scripts (load order is important) -->
         <script type="text/javascript" src="./Config.js"></script>

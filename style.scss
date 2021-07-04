@@ -1,0 +1,54 @@
+body{
+    margin : 10px;
+    text-align : center;
+    a{
+        color : blue;
+    }
+}
+
+header{
+
+    padding : 10px;
+
+    h1{
+        font-weight : bold;
+        margin : 10px;
+        padding :5px;
+        font-size : 1.4em;
+    }
+
+    p{
+        margin : 10px;
+    }
+}
+
+main{
+    margin : 20px;
+    padding : 10px;
+}
+
+footer{
+    margin : 15px;
+
+    p{
+        font-size : 0.9em;
+        margin : 4px;
+        padding : 4px;
+    }
+}
+
+.small{
+    font-size : 0.8em;
+}
+
+.btn{
+    color : white;
+    text-align : center;
+
+    box-shadow : 1px 3px 3px gray;
+    width : 100px;
+    background : #4191e0;
+    border-radius : 5px;
+    margin : 12px;
+    padding : 10px;
+}
