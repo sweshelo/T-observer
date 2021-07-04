@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>T-observer</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>T-observer</title>
 
-  <!-- msal.min.js can be used in the place of msal.js; included msal.js to make debug easy -->
-  <script src="https://alcdn.msauth.net/browser/2.13.1/js/msal-browser.js"
-    integrity="sha384-7hwr87O1w6buPsX92CwuRaz/wQzachgOEq+iLHv0ESavynv6rbYwKImSl7wUW3wV"
-    crossorigin="anonymous"></script>
+        <!-- msal.min.js can be used in the place of msal.js; included msal.js to make debug easy -->
+        <script src="https://alcdn.msauth.net/browser/2.13.1/js/msal-browser.js"
+                integrity="sha384-7hwr87O1w6buPsX92CwuRaz/wQzachgOEq+iLHv0ESavynv6rbYwKImSl7wUW3wV"
+                crossorigin="anonymous"></script>
 
-  <!-- To help ensure reliability, Microsoft provides a second CDN -->
-  <script type="text/javascript">
-    if (typeof Msal === 'undefined') document.write(unescape("%3Cscript src='https://alcdn.msftauth.net/browser/2.13.1/js/msal-browser.js' type='text/javascript' crossorigin='anonymous' %3E%3C/script%3E"));
-  </script>
+        <!-- To help ensure reliability, Microsoft provides a second CDN -->
+        <script type="text/javascript">
+            if (typeof Msal === 'undefined') document.write(unescape("%3Cscript src='https://alcdn.msftauth.net/browser/2.13.1/js/msal-browser.js' type='text/javascript' crossorigin='anonymous' %3E%3C/script%3E"));
+        </script>
 
-</head>
+    </head>
 
-<body>
-    <main>
-        <button type="button" id="SignIn" class="btn" onclick="signIn()">
-            Sign In
-        </button>
-        <br>
-        <button type="button" id="Watch" class="btn" onclick="check()">
-            Check
-        </button>
-    </main>
+    <body>
+        <main>
+            <button type="button" id="SignIn" class="btn" onclick="signIn()">
+                Sign In
+            </button>
+            <br>
+            <button type="button" id="Watch" class="btn" onclick="check()">
+                Check
+            </button>
+        </main>
 
-    <!-- importing app scripts (load order is important) -->
-    <script type="text/javascript" src="./Config.js"></script>
-    <script type="text/javascript" src="./authPopup.js"></script>
-    <script type="text/javascript" src="./graph.js"></script>
-</body>
+        <!-- importing app scripts (load order is important) -->
+        <script type="text/javascript" src="./Config.js"></script>
+        <script type="text/javascript" src="./authPopup.js"></script>
+        <script type="text/javascript" src="./graph.js"></script>
+    </body>
 
 </html>
