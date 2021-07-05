@@ -50,7 +50,10 @@ function getPlans(callBack){
     getTokenPopup(tokenRequest)
         .then(response => {
             callMSGraph(graphConfig.graphPlannerEndpoint, "GET", response.accessToken, null, (e)=>{
-                callBack(e.value);
+                pObj = e.value;
+                if (callBack !== null) {
+                    callBack(e.value);
+                }
             })
         });
 }
@@ -89,7 +92,20 @@ function generateAlert(planObj){
     }
 }
 
+
 function check(){
-    getPlans(generateAlert);
+    //clientId = document.getElementById("clientId").value;
+    //authority = document.getElementById("authority").value;
+    getPlans(()=>{
+        let count = Object.keys(pObj).length;
+        if (count > 0){
+            alert("未完了のタスクが"+count+"件あります。Teamsメッセージを送信して、チームメンバーに周知しましょう。");
+        }
+    });
 }
 
+var pObj = null;
+
+function post(){
+    generateAlert(pObj);
+}
