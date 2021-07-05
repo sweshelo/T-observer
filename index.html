@@ -23,18 +23,35 @@
     <body>
         <header>
             <h1>T-observer</h1>
-            <p>規定のTeamからPlannerタスクを取得して状況に応じてTemasへ自動投稿します</p>
+            <p>規定のTeamからPlannerタスクを取得して状況に応じてTeamsへ自動投稿します</p>
         </header>
         <main>
-            <button type="button" id="SignIn" class="btn" onclick="signIn()">
-                Sign In
-            </button>
-            <p class="small">Officeにサインインします。<br>このアプリはあなたのチームへアクセス権を要求します。</p>
-            <br>
-            <button type="button" id="Watch" class="btn" onclick="check()">
-                Check
-            </button>
-            <p class="small">規定のチームへTeamsメッセージを送信します。</p>
+            <section id="apps_settings">
+                <div class="apps_settings_wrapper">
+                    <p>Your Client ID</p>
+                    <input type="text" id="cliendId">
+                </div>
+                <div class="apps_settings_wrapper">
+                    <p>Your Directory ID</p>
+                    <input type="text" id="authority">
+                </div>
+            </section>
+            <section id="apps_function">
+                <button type="button" id="SignIn" class="btn" onclick="signIn()">
+                    Sign In
+                </button>
+                <p class="small">Officeにサインインします<br>このアプリはあなたのチームへアクセス権を要求します</p>
+                <br>
+                <button type="button" id="Check" class="btn" onclick="check()">
+                    Check
+                </button>
+                <p class="small">チームのPlanを取得します</p>
+                <br>
+                <button type="button" id="Post" class="btn" onclick="post()">
+                    Post
+                </button>
+                <p class="small">Teamsメッセージを送信します</p>
+            </section>
         </main>
 
         <footer>
