@@ -16,7 +16,9 @@ const planID = "";
 ```
 
 続いて上記の値を正確に埋めます。  
-`redirectUri`は[Microsoft Azure アプリの登録](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)の管理->認証->シングルページ アプリケーションから確認できるリダイレクトURIです。末尾の`\`を忘れるなど、1文字でも違うとエラーとなります。  
+`redirectUri`は[Microsoft Azure アプリの登録](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)の管理->認証->シングルページ アプリケーションから確認できるリダイレクトURIです。末尾の`/`を忘れるなど、1文字でも違うとエラーとなります。  
+Miscrosoftから認証情報が返されるURIのため、ここで指定した場所にサーバを建てる必要があります。  
+  
 `ClientID`、`authority`は[Microsoft Azure アプリの登録](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)からアプリを登録すると貰える値です。  
 `authority`は`"https://login.microsoftonline.com/"`から始まるURLです。  
   
@@ -27,5 +29,3 @@ const planID = "";
 `planID`は[Web版のplanner](https://tasks.office.com/)にアクセスした際に確認できるURLの中のパラメータ`planID`がこれに相当します。  
   
 値を埋めれば作業は概ね終了です。  
-最後にlocalhost:3000にサーバを立ててファイルを置き、ページにアクセスすれば利用可能かと思います。  
-
