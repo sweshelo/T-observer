@@ -97,9 +97,14 @@ function check(){
     //clientId = document.getElementById("clientId").value;
     //authority = document.getElementById("authority").value;
     getPlans(()=>{
+        let e = document.getElementById("log");
         let count = Object.keys(pObj).length;
+
         if (count > 0){
-            alert("未完了のタスクが"+count+"件あります。Teamsメッセージを送信して、チームメンバーに周知しましょう。");
+            e.value += "未完了のプランが存在します。\n\n";
+            pObj.forEach(t =>{
+                e.value += t.title+'\n';
+            })
         }
     });
 }
